@@ -1,8 +1,8 @@
 @import "custom.css";
 
 :root {
-  --content-width: 1120px;
-  --container-width: 810px;
+  --content-width: 1800px;
+  --container-width: 1800px;
 
   --light-primary-color: 255, 255, 255;
   --light-secondary-color: #dddddd;
@@ -56,7 +56,7 @@ main#content {
   width: var(--content-width);
 }
 
-main#content>.container {
+main#content > .container {
   margin: auto;
   width: 75%;
   max-width: var(--container-width);
@@ -266,7 +266,8 @@ a:hover .feather-sun {
   left: 0;
   margin-left: 30%;
   overflow: hidden;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 10px;
   position: absolute;
   text-align: center;
   width: 40%;
@@ -341,7 +342,7 @@ code {
   font-size: 0.8em;
 }
 
-:not(pre)>code {
+:not(pre) > code {
   background-color: var(--light-secondary-color) !important;
   color: var(--light-text-color);
   padding: 1px 4px;
@@ -407,7 +408,7 @@ table td {
   object-fit: cover;
 }
 
-/* Avatar sizes (default is M) - XS, S, M, L, XL */
+/* Avatar sizes (default is M) - XS, S, M, L, XL, XXL */
 .home-about .avatar img.size-xs {
   height: 7rem;
   width: 7rem;
@@ -431,6 +432,11 @@ table td {
 .home-about .avatar img.size-xl {
   height: 15rem;
   width: 15rem;
+}
+
+.home-about .avatar img.size-xxl {
+  height: 25rem;
+  width: 25rem;
 }
 
 .home-about h1 {
@@ -473,7 +479,7 @@ table td {
 
 .home-posts {
   margin: 0 auto;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
   width: 80%;
 }
 
@@ -543,7 +549,7 @@ table td {
 }
 
 .list-posts .post-title {
-  margin: 18px 0 0 15px;
+  margin: 18px 0 50px 0px;
 }
 
 .list-posts a {
@@ -741,4 +747,33 @@ table td {
 
 .header-nav {
   font-size: 1.35rem;
+}
+
+#main-wrapper {
+  display: flex;
+  padding-top: 8rem;
+  gap: 7rem;
+}
+
+#main-wrapper > * {
+  flex: 1;
+}
+
+#description-heading {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+#recent-posts-heading {
+  font-size: 3.5rem;
+  margin-top: 0;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.post-date {
+  align-self: flex-start;
 }
