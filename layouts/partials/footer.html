@@ -30,10 +30,13 @@
   {{ end }}
 
   {{ if (gt (.Scratch.Get "footerText" | len) 0) }}
-    <span>&copy; {{ .Scratch.Get "footerText" | markdownify }}</span>
+    <span id="footer-copyright">&copy; {{ .Scratch.Get "footerText" | markdownify }}</span>
   {{ end }}
   {{ if isset .Site.Params "socialicons" }}
-    <div class="gk-social-icons">
+    <div
+      class="gk-social-icons"
+      id="footer-icons"
+    >
       <ul class="gk-social-icons-list">
         {{ range .Site.Params.SocialIcons }}
           <li class="gk-social-icon">
